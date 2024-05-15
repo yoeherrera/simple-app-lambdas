@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plotly Chart in Flask</title>
+</head>
+<body>
+    <h1>My Plotly Chart</h1>
+    <div>{{ graph_html|safe }}</div>
+
+<h1>Documents founds</h1>
+<ul>
+        {% for item in docs_found %}
+            <li>item</li>
+        {% endfor %}
+        </ul>
+
+</body>
+</html>

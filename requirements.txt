@@ -1,0 +1,7 @@
+numpy==1.26.4
+nltk==3.8.1
+matplotlib==3.8.4
+flask==3.0.3
+pandas==2.2.2
+plotly==5.22.0
+pymongo==4.7.2
