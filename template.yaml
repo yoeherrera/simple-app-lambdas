@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Resources:
+  FindDocsFunction:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: backend/lambda_find_docs/search_docs.lambda_handler
+      Runtime: python3.9
+      CodeUri: .
+      MemorySize: 128
+      Timeout: 100
+      Policies: AmazonDynamoDBReadOnlyAccess
+  AnswerFunction:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: backend/lambda_answer/plot_freq.lambda_handler
+      Runtime: python3.9
+      CodeUri: .
+      MemorySize: 128
+      Timeout: 100
+      Policies: AmazonDynamoDBReadOnlyAccess
